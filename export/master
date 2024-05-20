@@ -1,0 +1,20 @@
+#!/bin/bash
+
+export PATH=/Applications/MATLAB_R2021b.app/bin/:$PATH
+
+constraint="radius_min_cap_constraint.m";
+objective="triple_objective.m";
+
+chmod 777 krig
+
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+    mkdir $i 
+    cp $objective $constraint build_smf.py run_script_gnr.m Immune_in_ Native_in_ krig Scaffold_in_default read_Immune_in.m read_Scaffold_in.m write_Immune_in.m write_Scaffold_in.m  $i
+    cd $i
+    sleep 5
+    matlab -nodisplay -nosplash -nodesktop -r "run_script_gnr; exit;" > log.txt &
+    cd ../
+done
+
+
