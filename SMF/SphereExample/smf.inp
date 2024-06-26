@@ -1,0 +1,16 @@
+Phase
+START
+Dimension
+3
+Number of LHS divisions
+12
+Upper bound
+1.00000000 1.00000000 1.00000000 
+Lower bound
+-1.00000000 -1.00000000 -1.00000000 
+Kriging theta upper bound
+900.00000000 900.00000000 900.00000000 
+Kriging theta lower bound
+0.00010000 0.00010000 0.00010000 
+Spacing
+11 11 11 
